@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>    
+</head>
+<body>    
+<form action="lol.php" method="POST">    
+<div id="input_div">
+<?php
+$fruits[]="apple";
+$fruits[]="banana";
+$fruits[]="watermelon";
+?>
+<input type="radio" name="fruits_value" value="10" checked>$10 <?php echo $fruits[0]?><br>
+<input type="radio" name="fruits_value" value="20">$20 <?php echo $fruits[1]?><br>
+<input type="radio" name="fruits_value" value="30">$30 <?php echo $fruits[2]?><br><br>
+price$<input type="text" id="fruit_price" value=""><br><br>
+quantity<button type="button" id="moins" onclick="minus()">-</button>
+<input type="number" name="bbbb" value="1" id="count">
+<button type="button" id="moins" onclick="plus()">+</button><br><br>
+Total <input type="text" value="" id="total"><br><br>
+</div>
+</form>
+<script>
+$(document).ready(function() {
+    $('#fruit_price').val($('input[checked]').val());
+    $('#total').val($('input[checked]').val());
+    $('input[type=radio]').click(function() {
+        $('#fruit_price').val(this.value);
+        $('#total').val($('#fruit_price').val()* count);
+    });
+});
+var price = document.getElementById('fruit_price');
+var count = 1;
+var total = 0;
+var countEl = document.getElementById('count');
+var countEl1 = document.getElementById('total');
+
+kurang = () => {
+        count--;
+        total=price.value*count;
+        countEl.value = count;
+        countEl1.value = total;
+}
+    plus = () =>{
+        count++;
+        total=price.value*count;
+        countEl.value = count;
+        countEl1.value = total;
+    }
+    minus = () => {
+        count < 0 ? this.kurang : alert ("kurang dari 0");
+    }
+
+</script>
+</body>
+</html>
