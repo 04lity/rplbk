@@ -1,0 +1,22 @@
+class Message extends React.Component {
+    render(){
+        return(
+        <div>
+          <small>{this.props.sender}:</small>
+          <p>{this.props.content}</p>
+          <hr/>
+        </div>
+      );
+    }
+  }
+  
+  let chat = (
+    <div>
+    <Message sender="lita" content="Hi, Apa kabar?" />
+    <Message sender="patricia" content="Kabar Baik" />
+    </div>
+  );
+  
+ 
+</React.StrictMode>, document.getElementById("root")
+);
