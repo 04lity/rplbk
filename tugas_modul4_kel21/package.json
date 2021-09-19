@@ -1,0 +1,25 @@
+{
+  "name": "tugas_modul4_kel21",
+  "version": "1.0.0",
+  "description": "tugas ",
+  "main": "index.js",
+  "scripts": {
+    "test": "coba"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/04lity/rplbk.git"
+  },
+  "keywords": [
+    "lita"
+  ],
+  "author": "litam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/04lity/rplbk/issues"
+  },
+  "homepage": "https://github.com/04lity/rplbk#readme",
+  "dependencies": {
+    "react-router-dom": "^5.3.0"
+  }
+}
